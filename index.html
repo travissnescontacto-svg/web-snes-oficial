@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY8RJV54BX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WY8RJV54BX');
+</script>
+    <meta charset="UTF-8">
+    <title>Super Nintendo (SNES) ROMs | Travis_SNES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="mando.png">
+    <meta property="og:title" content="Super Nintendo (SNES) ROMs | Travis_SNES">
+    <meta property="og:description" content="Descarga los mejores ROMs de SNES y emuladores. Proyecto by Travis_SNES.">
+    <meta property="og:image" content="supermegapack.png">
+    <meta property="og:url" content="https://travis-snes.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; padding: 0; 
+            background: #000 url('fondo.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: #eeeeee; 
+        }
+        header { 
+            text-align: center; padding: 50px 10px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Gemini_Generated_Image_a5go56a5go56a5go.jpg');
+            background-size: cover; background-position: center;
+            border-bottom: 5px solid #d32f2f;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .mando-img { width: 150px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.2)); margin-bottom: 10px; }
+        h1 { 
+            margin: 0; font-size: clamp(1.8em, 5vw, 3.5em); text-transform: uppercase;
+            font-weight: 900; background: linear-gradient(to bottom, #ffffff 40%, #cccccc 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(4px 4px 0px #d32f2f); font-style: italic; line-height: 1;
+        }
+        .firma-container {
+            display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 15px;
+            background: rgba(0,0,0,0.85); padding: 8px 25px; border-radius: 50px; 
+            border: 1px solid rgba(211, 47, 47, 0.6); backdrop-filter: blur(5px);
+        }
+        .user-name { font-size: 1.2em; color: #ff4444; font-weight: bold; }
+        .redes { display: flex; gap: 15px; }
+        .redes a { color: #fff; font-size: 1.3em; text-decoration: none; transition: 0.3s; }
+        .redes a:hover { transform: translateY(-3px) scale(1.2); }
+        .fa-youtube:hover { color: #ff0000; filter: drop-shadow(0 0 8px #ff0000); }
+        .fa-twitch:hover { color: #9146ff; filter: drop-shadow(0 0 8px #9146ff); }
+        .fa-tiktok:hover { color: #fff; text-shadow: 2px 0 0 #ff0050, -2px 0 0 #00f2ea; }
+        .emu-bar { max-width: 900px; margin: 25px auto; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 0 15px; }
+        .emu-item {
+            background: rgba(15,15,15,0.95); border: 1px solid #444; border-radius: 12px; 
+            padding: 12px 18px; display: flex; align-items: center; gap: 15px;
+            min-width: 260px; backdrop-filter: blur(10px);
+        }
+        .emu-item i { font-size: 1.8em; color: #d32f2f; }
+        .emu-info h4 { margin: 0; font-size: 0.9em; color: #ff4444; text-transform: uppercase; }
+        .emu-btns { display: flex; gap: 6px; margin-top: 6px; }
+        .btn-s { background: #d32f2f; color: #fff; text-decoration: none; padding: 5px 10px; font-size: 0.75em; font-weight: bold; border-radius: 4px; transition: 0.3s; }
+        .btn-s.alt { background: #444; }
+        .contenedor { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; }
+        .card { background: rgba(10,10,10,0.92); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.4s; display: flex; flex-direction: column; }
+        .card:hover { border-color: #ff4444; transform: translateY(-8px); box-shadow: 0 10px 20px rgba(211,47,47,0.2); }
+        .card.pack-especial { border: 2px solid #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(40,35,10,0.95)); }
+        .card.pack-especial h3 { background: linear-gradient(to bottom, #cfb53b 0%, #826a0d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .img-box { width: 100%; height: 180px; background: #000; display: flex; align-items: center; justify-content: center; border-bottom: 3px solid #d32f2f; }
+        .card-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .info { padding: 15px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .info h3 { margin: 0; font-size: 1.1em; color: #ff4444; text-transform: uppercase; }
+        .btn-dl { display: block; background: #d32f2f; color: #fff; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; margin-top: 10px; }
+        .seccion-donaciones { margin-top: 60px; padding: 30px; background: rgba(15, 15, 15, 0.95); border: 2px solid #ff4444; border-radius: 20px; text-align: center; box-shadow: 0 0 30px rgba(211, 47, 47, 0.4); }
+        .qr-flex { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 20px; }
+        .qr-item { text-align: center; width: 200px; }
+        .qr-contenedor-img { width: 200px; height: 200px; background: #fff; border-radius: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 4px solid #333; }
+        .qr-contenedor-img img { width: 100%; height: 100%; object-fit: contain; }
+        .qr-label { margin-top: 15px; font-weight: bold; color: #ff4444; font-size: 1.1em; }
+        .footer-mensaje { margin-top: 40px; padding: 40px 20px; background: rgba(0, 0, 0, 0.8); border-top: 2px solid #d32f2f; text-align: center; border-radius: 20px 20px 0 0; }
+        .footer-mensaje p { max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; font-size: 1.1em; color: #ccc; }
+        .email-contacto { color: #ff4444; font-weight: bold; font-size: 1.2em; text-decoration: none; border-bottom: 1px dashed #ff4444; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="mando.png" class="mando-img">
+    <h1>Super Nintendo (SNES) ROMs</h1>
+    <div class="firma-container">
+        <span class="user-name">by Travis_SNES</span>
+        <div class="redes">
+            <a href="https://www.youtube.com/@Travis_SNES" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/travis_snes" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.tiktok.com/@travis_snes?lang=es" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</header>
+
+<div class="emu-bar">
+    <div class="emu-item">
+        <i class="fas fa-desktop"></i>
+        <div>
+            <h4>Emuladores PC</h4>
+            <div class="emu-btns">
+                <a href="https://www.mediafire.com/file/2ar4w0jinoydwwb/snes9x-1.62.3-win32-x64.zip/file" target="_blank" class="btn-s">SNES9X</a>
+                <a href="https://www.mediafire.com/file/bnnjuskv7fuvfpd/snesgt0230b6e.zip/file" target="_blank" class="btn-s alt">SNESGT</a>
+            </div>
+        </div>
+    </div>
+    <div class="emu-item">
+        <i class="fas fa-mobile-alt"></i>
+        <div>
+            <h4>Android</h4>
+            <div class="emu-btns">
+                <a href="https://www.mediafire.com/file/sgpa7toh87gzr9z/emulador_snes_para_android.rar/file" target="_blank" class="btn-s">SNES9X EX+</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="max-width: 1200px; margin: 0 auto 30px auto; padding: 0 15px;">
+    <div style="background: rgba(20, 20, 20, 0.95); border: 2px solid #d32f2f; border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(211, 47, 47, 0.4);">
+        <h3 style="color: #ff4444; margin-top: 0; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">
+            <i class="fab fa-youtube" style="color: #ff0000; margin-right: 10px;"></i> ¿Dudas con la configuración?
+        </h3>
+        <p style="color: #ddd; font-size: 1rem; margin-bottom: 20px;">Mira el video paso a paso para configurar el emulador en PC y Android</p>
+        <a href="https://www.youtube.com/watch?v=MnYFda1j3do&list=PL0Pci4j58LNu29Veh8cuOCTFJ9IA6wQNp" target="_blank" style="display: inline-block; background: #ff0000; color: white; padding: 12px 35px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(255,0,0,0.3);">
+            VER TUTORIALES COMPLETOS (NES / SNES)
+        </a>
+    </div>
+</div>
+
+<div class="contenedor">
+    <div class="grid">
+        <div class="card pack-especial">
+            <div class="img-box"><img src="MarioTanooki.png" class="card-img"></div>
+            <div class="info">
+                <h3>SNES LAUNCHER PRO</h3>
+                <p style="color: #ff4444; font-weight: bold; margin: 10px 0; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fas fa-star"></i> Versión Exclusiva
+                </p>
+                <a href="https://www.mediafire.com/file/vcrgk0rb4qk1aw3/Instalador_SNES_Launcher_Pro.rar/file" target="_blank" class="btn-dl">DESCARGAR AHORA</a>
+            </div>
+        </div>
+
+        <a href="https://www.mediafire.com/folder/1ahh22e3qxx7m/pack_NES_emuladores_%2B_1200_juegos" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card" style="border: 2px solid #ff4444;">
+                <div class="img-box"><img src="nes.jpg" class="card-img"></div>
+                <div class="info">
+                    <h3>PACK + EMULADOR</h3>
+                    <p style="color: #00ff00; font-weight: bold; margin: 10px 0; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-check-circle"></i> Ya Disponible
+                    </p>
+                    <span class="btn-dl">DESCARGAR AHORA</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="card pack-especial">
+            <div class="img-box"><img src="supermegapack.png" class="card-img"></div>
+            <div class="info">
+                <h3>SUPER MEGA PACK (784 ROMS)</h3>
+                <a href="https://www.mediafire.com/folder/0o79hhzw0mhrr/SNES_ROMS_USA" target="_blank" class="btn-dl">Explorar Carpeta VIP</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="bikermice.png" class="card-img"></div>
+            <div class="info"><h3>Biker Mice from Mars</h3><a href="https://www.mediafire.com/file/wo7fc1lc2d64j3b/Biker_Mice_from_Mars_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="contraIII.png" class="card-img"></div>
+            <div class="info"><h3>Contra III: Alien Wars</h3><a href="https://www.mediafire.com/file/rzl9wcogwbbtas2/Contra_III_-_The_Alien_Wars_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="donkey2.png" class="card-img"></div>
+            <div class="info"><h3>Donkey Kong Country 2</h3><a href="https://www.mediafire.com/file/t7i0u1s9gjlavua/Super_Donkey_Kong_2_-_Dixie_%2526_Diddy_%2528Japan%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="metalwarriors.png" class="card-img"></div>
+            <div class="info"><h3>Metal Warriors</h3><a href="https://www.mediafire.com/file/u7jug94k962xpn4/Metal_Warriors_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="strikegunner.png" class="card-img"></div>
+            <div class="info"><h3>Strike Gunner S.T.G</h3><a href="https://www.mediafire.com/file/c59ffkpe7i6rb95/Strike_Gunner_S.T.G_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="sunsetriders.png" class="card-img"></div>
+            <div class="info"><h3>Sunset Riders</h3><a href="https://www.mediafire.com/file/7w0ey1ngtbnngyv/Sunset_Riders_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="superbomberman3.png" class="card-img"></div>
+            <div class="info"><h3>Super Bomberman 3</h3><a href="https://www.mediafire.com/file/f7xuz74ht2uwndw/Super_Bomberman_3_%2528J%2529%252835326%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="superbomberman4.png" class="card-img"></div>
+            <div class="info"><h3>Super Bomberman 4</h3><a href="https://www.mediafire.com/file/hj778wr8al7pfpc/Super_Bomberman_4_%2528Japan%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="superbomberman5.png" class="card-img"></div>
+            <div class="info"><h3>Super Bomberman 5</h3><a href="https://www.mediafire.com/file/n0qorem1oqkw973/Super_Bomber_Man_5_%2528Japan%2529_%2528Caravan_Event_Ban%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="marioall-stars.png" class="card-img"></div>
+            <div class="info"><h3>Mario All-Stars + World</h3><a href="https://www.mediafire.com/file/rv5u357fpjipi9s/Super_Mario_All-Stars_%252B_Super_Mario_World_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="supermarioworld.png" class="card-img"></div>
+            <div class="info"><h3>Super Mario World</h3><a href="https://www.mediafire.com/file/jb3hjhtcgdb2m1r/Super_Mario_World_%2528USA%2529.rar/file" target="_blank" class="btn-dl">Descargar</a></div>
+        </div>
+    </div>
+
+    <div class="seccion-donaciones">
+        <h2><i class="fas fa-donate"></i> APOYA AL CANAL</h2>
+        <div class="qr-flex">
+            <div class="qr-item">
+                <div class="qr-contenedor-img"><img src="yape.png" alt="Yape"></div>
+                <p class="qr-label">YAPE</p>
+            </div>
+            <div class="qr-item">
+                <div class="qr-contenedor-img"><img src="plin.png" alt="Plin"></div>
+                <div style="margin-top: 15px;">
+                    <a href="https://www.paypal.com/paypalme/TravisSnes" target="_blank" style="display: inline-block; background: #0070ba; color: #fff; text-decoration: none; padding: 10px 25px; border-radius: 5px; font-weight: bold; font-size: 1em; transition: 0.3s;">
+                        <i class="fab fa-paypal"></i> PayPal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-mensaje">
+        <p>¿Te gusta el contenido? No olvides seguirme en mis redes para más novedades.</p>
+        <p>Si encuentras algún link caído, por favor repórtalo a:</p>
+        <a href="mailto:travis.snes.contacto@gmail.com" class="email-contacto">travis.snes.contacto@gmail.com</a>
+    </footer>
+
+    <div id="seccion-comunidad" style="max-width: 1200px; margin: 40px auto; padding: 30px; background: rgba(15, 15, 15, 0.95); border: 2px solid #ff4444; border-radius: 20px; text-align: center; box-shadow: 0 0 30px rgba(211, 47, 47, 0.4);">
+        <h2 style="color: #ff4444; text-transform: uppercase; letter-spacing: 2px;"><i class="fas fa-comments"></i> Muro de la Comunidad</h2>
+        <div id="caja-comentarios" style="margin-top: 25px; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; border: 1px solid #ff4444;">
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = "https://travis-snes.netlify.app/";
+        this.page.identifier = "travis-snes-main";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://travis-snes.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+</body>
+</html>
